@@ -70,4 +70,3 @@ Você foi contratado para desenvolver um sistema para o Sindicato dos Trainees, 
 - CSS
 - MySQL Workbench
 - FPDF
-# avaliacaomoobi
