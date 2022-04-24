@@ -1,0 +1,5 @@
+./phpComDocker/.idea
+*idea/
+*/vendor
+*.pdf
+*/db

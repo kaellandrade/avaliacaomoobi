@@ -1,0 +1,115 @@
+.titulo-dados-pessoais-form{
+    font-size: 30px;
+    margin: 25px;
+}
+.pagina-login{
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.caixa-dados-pessoais{
+    text-align: center;
+    border: 1px solid;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: #151936;
+    border-radius: 10px;
+    box-shadow: 0 10px 1em rgba(2, 2, 4, 0.35);
+}
+
+.caixa-login{
+    width: 300px;
+    height: 250px;
+    text-align: center;
+    border: 1px solid;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: #151936;
+    border-radius: 10px;
+    box-shadow: black ;
+    box-shadow: 0 10px 1em rgba(2, 2, 4, 0.35);
+}
+.form{
+    color: #fbfaf9;
+    align-items: center;
+    justify-content: space-between;
+}
+.form-login{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+.form-dados-pessoais{
+    margin: 40px;
+}
+.pagina-login{
+    height: 100vh !important;
+}
+.row-registro{
+    height: min-content;
+}
+.btn-avancar{
+    background-color: #d8dadc;
+    transition: 0.5s;
+}
+.btn-avancar:hover{
+    background-color: #a2cd38;
+    transition: 0.5s;
+}
+
+.btn-avancar{
+    background-color: #d8dadc;
+    width: 100%;
+}
+
+
+ .bi-fingerprint{
+    font-size: 80px;
+    color: #a8ce3a;
+    margin-bottom: 30px;
+}
+.nome{
+    font-size: 18px;
+}
+.navbar-brand{
+    color: #a8ce3a !important;
+    font-weight: bold;
+}
+.mensagem-saudacao{
+    position: absolute;
+    right: 0;
+    margin: 0;
+}
+.formulario-filtro, .formulario-cadastro{
+    padding: 1.5rem;
+    margin-right: 0;
+    margin-left: 0;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    border: 1px solid #dee2e6;
+}
+.input-page{
+    border: none;
+    text-align: center;
+    font-style: italic;
+    font-size: 15px;
+}
+.ativo, .desativado{
+    font-weight: bold;
+}
+.ativo{
+    color: forestgreen;
+}
+.desativado{
+    color: orangered;
+}
+.title{
+    color: rgba(0, 0, 0, 0.73);
+}
+.image-boas-vindas{
+    border-radius: 100%;
+    box-shadow: -8px 0px 50px rgba(0, 0, 0, 0.27);
+}

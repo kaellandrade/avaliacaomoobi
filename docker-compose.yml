@@ -1,0 +1,43 @@
+version: "3"
+services:
+  mysqlDb:
+    container_name: mysqlmicael
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+      MYSQL_DATABASE: micaelandrade
+      MYSQL_USER: moobi
+      MYSQL_PASSWORD: 123
+    ports:
+      - '9906:3306'
+    volumes:
+      - "./db:/var/lib/mysql"
+    networks:
+      - production-network
+    command:
+      - "--default-time-zone=America/Sao_Paulo"
+
+  php-apache:
+    container_name: phpmicael
+    build: ./php8-apache
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+      - ./php8-apache/config/jit.ini:/usr/local/etc/php/conf.d/jit.ini
+      - ./php8-apache/config/timezone.ini:/usr/local/etc/php/conf.d/timezone.ini
+      #     Configurando modo Debug
+      - ./php8-apache/config/conf.d/xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+      - ./php8-apache/config/conf.d/error_reporting.ini:/usr/local/etc/php/conf.d/error_reporting.ini
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - production-network
+    depends_on:
+      - mysqlDb
+    links:
+      - mysqlDb
+
+networks:
+  production-network:
+    driver: bridge

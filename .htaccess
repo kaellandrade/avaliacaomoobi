@@ -1,0 +1,8 @@
+RewriteEngine on
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+
+RewriteRule ^([^/]*)$ ./public/index.php?pagina=$1 [QSA,L]
+RewriteRule ^([a-z-]*)$ ./public/index.php?pagina=$1 [QSA,L]
+RewriteRule ^([a-z-]*)/([a-z0-9-]+)?$ ./public/index.php?module=$1&action=$2 [QSA,L]
+RewriteRule ^([a-z-]*)/([a-z0-9-]*)/([a-z0-9-;+]+)?$ ./public/index.php?module=$1&action=$2&value=$3 [QSA,L]
